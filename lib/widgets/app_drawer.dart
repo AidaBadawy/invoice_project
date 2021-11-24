@@ -131,11 +131,51 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                     subtitle: Text('Agent'),
                     children: [
                       ListTile(
+                        selectedTileColor: Colors.grey[200],
                         leading:
-                            const Icon(MaterialIcons.logout, color: Colors.red),
+                            const Icon(FontAwesome5Solid.file_invoice_dollar),
+                        title: const Text(
+                          PageTitles.account,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        onTap: () async {
+                          await _navigateTo(context, RouteNames.account);
+                        },
+                        selected: _selectedRoute == RouteNames.account,
+                      ),
+                       ListTile(
+                        selectedTileColor: Colors.grey[200],
+                        leading:
+                            const Icon(FontAwesome5Solid.file_invoice_dollar),
+                        title: const Text(
+                          PageTitles.subscription,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        onTap: () async {
+                          await _navigateTo(context, RouteNames.subscription);
+                        },
+                        selected: _selectedRoute == RouteNames.subscription,
+                      ),
+                       ListTile(
+                        selectedTileColor: Colors.grey[200],
+                        leading:
+                            const Icon(FontAwesome5Solid.file_invoice_dollar),
+                        title: const Text(
+                          PageTitles.billing,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        onTap: () async {
+                          await _navigateTo(context, RouteNames.billing);
+                        },
+                        selected: _selectedRoute == RouteNames.billing,
+                      ),
+                      ListTile(
+                        tileColor: Colors.red,
+                        leading:
+                            const Icon(MaterialIcons.logout, color: Colors.white),
                         title: const Text(
                           'Logout',
-                          style: TextStyle(color: Colors.red),
+                          style: TextStyle(color: Colors.white),
                         ),
                         onTap: () async {
                           await _navigateTo(context, RouteNames.home);
