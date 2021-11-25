@@ -7,6 +7,10 @@ class PageTitles {
   static const String estimate = 'Estimate';
   static const String home = 'Home';
   static const String account = 'Account';
+
+  static const String accountedit = 'Edit Account';
   static const String subscription = 'Subscription';
+
+  static const String subscriptionplan = 'Subscription Plan';
   static const String billing = 'Biling';
 }

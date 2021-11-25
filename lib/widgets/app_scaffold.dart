@@ -113,7 +113,7 @@ class AppScaffold extends StatelessWidget {
                     ? Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ElevatedButton(
-                            onPressed: () {}, child: Text('Add Treatment')),
+                            onPressed: () {}, child: Text('Save')),
                       )
                     : Container(),
                 Padding(

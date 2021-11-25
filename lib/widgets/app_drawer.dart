@@ -132,8 +132,7 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                     children: [
                       ListTile(
                         selectedTileColor: Colors.grey[200],
-                        leading:
-                            const Icon(FontAwesome5Solid.file_invoice_dollar),
+                        leading: const Icon(AntDesign.lock1),
                         title: const Text(
                           PageTitles.account,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -143,10 +142,9 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                         },
                         selected: _selectedRoute == RouteNames.account,
                       ),
-                       ListTile(
+                      ListTile(
                         selectedTileColor: Colors.grey[200],
-                        leading:
-                            const Icon(FontAwesome5Solid.file_invoice_dollar),
+                        leading: const Icon(Feather.star),
                         title: const Text(
                           PageTitles.subscription,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -156,10 +154,9 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                         },
                         selected: _selectedRoute == RouteNames.subscription,
                       ),
-                       ListTile(
+                      ListTile(
                         selectedTileColor: Colors.grey[200],
-                        leading:
-                            const Icon(FontAwesome5Solid.file_invoice_dollar),
+                        leading: const Icon(FontAwesome.credit_card),
                         title: const Text(
                           PageTitles.billing,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -171,8 +168,8 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                       ),
                       ListTile(
                         tileColor: Colors.red,
-                        leading:
-                            const Icon(MaterialIcons.logout, color: Colors.white),
+                        leading: const Icon(MaterialIcons.logout,
+                            color: Colors.white),
                         title: const Text(
                           'Logout',
                           style: TextStyle(color: Colors.white),

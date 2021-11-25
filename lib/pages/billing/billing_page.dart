@@ -11,7 +11,7 @@ class BillingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       backgroundColor: Colors.white,
-      icon: MaterialIcons.data_usage,
+      icon: FontAwesome.credit_card,
       pageTitle: PageTitles.billing,
       body: Center(
         child: Text('This is Billing page'),
