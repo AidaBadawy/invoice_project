@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:invoice_app/constants/custom_colors.dart';
 
 class FooterBox extends StatelessWidget {
   const FooterBox({Key key}) : super(key: key);
@@ -8,7 +9,7 @@ class FooterBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
+      color: CustomColors.greenColor,
       width: double.infinity,
       // height: MediaQuery.of(context).size.height / 2,
       child: Padding(
@@ -138,11 +139,6 @@ class FooterBox extends StatelessWidget {
               ],
             ),
             SizedBox(height: 25),
-            Container(
-                color: Colors.white,
-                child: Text('Copyright 2021 Invoice App',
-                    style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold)))
           ],
         ),
       ),

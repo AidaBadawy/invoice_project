@@ -10,6 +10,7 @@ import 'package:invoice_app/pages/invoice/invoice_page.dart';
 import 'package:invoice_app/pages/login/login_page.dart';
 import 'package:invoice_app/pages/register/register_page.dart';
 import 'package:invoice_app/pages/subscription/subscription_page.dart';
+import 'constants/custom_colors.dart';
 import 'widgets/app_route_observer.dart';
 import 'constants/route_names.dart';
 
@@ -27,7 +28,7 @@ class DemoApp extends StatelessWidget {
       title: 'Invoice App',
       theme: ThemeData(
         fontFamily: 'Montserrat',
-        primaryColor: Colors.blue,
+        primaryColor: CustomColors.greenColor,
         pageTransitionsTheme: PageTransitionsTheme(
           // makes all platforms that can run Flutter apps display routes without any animation
           // ignore: prefer_for_elements_to_map_f romiterable, prefer_for_elements_to_map_fromiterable

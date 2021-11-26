@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
+import 'package:invoice_app/constants/custom_colors.dart';
 
 class FeaturesBox extends StatefulWidget {
   const FeaturesBox({Key key}) : super(key: key);
@@ -19,27 +21,22 @@ class FeaturesBoxState extends State<FeaturesBox> {
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: Column(
             children: [
-              Expanded(
-                  child: featureBox(Icons.fast_forward, 'Fast & Easy',
-                      'Designed simple, built with cutting edge technologies that ensures speed and flexibility')),
-              SizedBox(width: 15),
-              Expanded(
-                  child: featureBox(Icons.language_rounded, 'Bilingual',
-                      'Arabic & English support; language will not be a barrier with Invoice App')),
-              SizedBox(width: 15),
-              Expanded(
-                  child: featureBox(Icons.lock, 'Maximum Protection',
-                      'Periodic data backup, while using the most robust and safest encryption methods')),
-              SizedBox(width: 15),
-              Expanded(
-                  child: featureBox(
-                      Icons.local_attraction_sharp,
-                      'ZATCA Certified',
-                      'Approved by the Zakat, Tax and Customs Authority (ZATCA) and support e-invoice')),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  featureBox('Get Paid Faster',
+                      'Businesses that use Invoice App get paid 14 days faster, on average'),
+                  SizedBox(width: 15),
+                  featureBox('Automate collections',
+                      'Waste less time on collections processes with automated email, letter and text communications.'),
+                  SizedBox(width: 15),
+                  featureBox('Streamline payments',
+                      'Provide a better payment experience for customers with a modern frictionless portal'),
+                ],
+              ),
             ],
           ),
         ),
@@ -47,24 +44,37 @@ class FeaturesBoxState extends State<FeaturesBox> {
     );
   }
 
-  Widget featureBox(IconData icon, String title, String text) {
+  Widget featureBox(String title, String text) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Row(
         children: [
-          Icon(icon, color: Colors.orange, size: 30),
-          SizedBox(height: 20),
-          Text(title,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
-          SizedBox(height: 10),
-          Text(
-            text,
-            style: TextStyle(letterSpacing: 1.5),
-            textAlign: TextAlign.center,
-          )
+          DottedLine(
+            direction: Axis.vertical,
+            lineLength: 200,
+          ),
+          SizedBox(width: 15),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title,
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: CustomColors.greenColor)),
+              SizedBox(height: 15),
+              SizedBox(
+                width: 350,
+                child: Text(
+                  text,
+                  style: TextStyle(letterSpacing: 1.5),
+                  softWrap: true,
+                ),
+              )
+            ],
+          ),
         ],
       ),
     );

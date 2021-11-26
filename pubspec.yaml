@@ -40,6 +40,8 @@ dependencies:
   delayed_display: ^2.0.0
   google_fonts: ^2.1.0
   syncfusion_flutter_charts: ^19.3.54
+  dotted_line: ^3.1.0
+  video_player: ^2.2.7
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +84,8 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: fonts/Montserrat-Regular.ttf
+        - asset: fonts/Montserrat-Black.ttf
+          weight: 900
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

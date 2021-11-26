@@ -3,6 +3,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
+import 'package:invoice_app/constants/custom_colors.dart';
 import 'package:invoice_app/constants/route_names.dart';
 
 class MainBox extends StatefulWidget {
@@ -34,9 +35,11 @@ class MainBoxState extends State<MainBox> {
                   AnimatedTextKit(
                     animatedTexts: [
                       TyperAnimatedText(
-                        'Invoicing system that suits your need without complexity',
+                        'Put accounts recievable on autopilot.',
                         textStyle: TextStyle(
-                            fontSize: 40, fontWeight: FontWeight.w900),
+                            fontSize: 50,
+                            fontWeight: FontWeight.w900,
+                            color: CustomColors.greenColor),
                       ),
                     ],
                     totalRepeatCount: 1,
@@ -51,16 +54,19 @@ class MainBoxState extends State<MainBox> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Introducing Invoice App, the modern cloud e-invoicing system with the most effective POS software for your business. Try it now, live the future.',
+                          'Get paid faster, waste less time and provide a better payment experience with the Invoice App Accounts Recievable Cloud.',
                           style: TextStyle(fontSize: 20),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 15),
                         ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    CustomColors.greenColor)),
                             onPressed: () async {
                               await _navigateTo(context, RouteNames.register);
                             },
                             child: Padding(
-                              padding: const EdgeInsets.all(16.0),
+                              padding: const EdgeInsets.all(14.0),
                               child: Text('Register'),
                             ))
                       ],

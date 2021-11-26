@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:invoice_app/constants/custom_colors.dart';
 import 'package:invoice_app/constants/route_names.dart';
 import 'package:invoice_app/pages/home/desktop/widgets/comments_box.dart';
 import 'package:invoice_app/pages/home/desktop/widgets/faq_box.dart';
@@ -10,6 +11,7 @@ import 'package:invoice_app/pages/home/desktop/widgets/footer_box.dart';
 import 'package:invoice_app/pages/home/desktop/widgets/main_box.dart';
 import 'package:invoice_app/pages/home/desktop/widgets/prices_box.dart';
 import 'package:invoice_app/pages/home/desktop/widgets/sectors_box.dart';
+import 'package:invoice_app/pages/home/desktop/widgets/video_box.dart';
 
 class HomeDesktopTwo extends StatefulWidget {
   const HomeDesktopTwo({Key key}) : super(key: key);
@@ -24,6 +26,7 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
   final sectorkey = GlobalKey<SectorsBoxState>();
   final priceskey = GlobalKey<PricesBoxState>();
   final faqkey = GlobalKey<FaqBoxState>();
+  final Color color = CustomColors.greenColor;
 
   Future scrollToItem(GlobalKey key, double align) async {
     final context = key.currentContext;
@@ -34,6 +37,11 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: CustomColors.greenColor,
+        child: Icon(Icons.chat),
+      ),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: AppBar(
@@ -43,9 +51,7 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
             padding: const EdgeInsets.all(8),
             child: Text('Logo',
                 style: GoogleFonts.dancingScript(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue)),
+                    fontSize: 40, fontWeight: FontWeight.bold, color: color)),
           ),
           actions: [
             Padding(
@@ -54,7 +60,7 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
                   onPressed: () {
                     scrollToItem(featurekey, 0.5);
                   },
-                  child: Text('FEATURES')),
+                  child: Text('FEATURES', style: TextStyle(color: color))),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -62,7 +68,7 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
                   onPressed: () {
                     scrollToItem(sectorkey, 0);
                   },
-                  child: Text('SECTORS')),
+                  child: Text('SECTORS', style: TextStyle(color: color))),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -70,7 +76,7 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
                   onPressed: () {
                     scrollToItem(priceskey, 0);
                   },
-                  child: Text('PRICES')),
+                  child: Text('PRICES', style: TextStyle(color: color))),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -78,7 +84,7 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
                   onPressed: () {
                     scrollToItem(faqkey, 0);
                   },
-                  child: Text('FAQ')),
+                  child: Text('FAQ', style: TextStyle(color: color))),
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -122,7 +128,8 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
             MainBox(key: mainkey),
             FeaturesBox(key: featurekey),
             SectorsBox(key: sectorkey),
-            PricesBox(key: priceskey),
+            SizedBox(height: 30),
+            VideoApp(),
             FaqBox(key: faqkey),
             CommentsBox(),
             FooterBox(),

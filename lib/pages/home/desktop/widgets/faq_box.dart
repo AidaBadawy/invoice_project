@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:invoice_app/constants/custom_colors.dart';
 
 class FaqBox extends StatefulWidget {
   const FaqBox({Key key}) : super(key: key);
@@ -21,150 +22,67 @@ class FaqBoxState extends State<FaqBox> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Got any questions?'),
-            Text('FAQ',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50)),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 450,
-                  child: ExpansionTile(
-                    leading: Icon(Icons.add, color: Colors.orange),
-                    title: Text('What is Invoice App?'),
-                    children: [
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            'It is a cloud-based electronic invoicing system that has a POS application'),
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 25),
-                SizedBox(
-                  width: 450,
-                  child: ExpansionTile(
-                    leading: Icon(Icons.add, color: Colors.orange),
-                    title: Text('Does Invoice App support E-Invoice?'),
-                    children: [
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            'Yes Invoice App supports E-Invoice. Invoice App is a solution provider approved by the Zakat Tax and Customs Authority'),
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                )
-              ],
+            Text('Start getting paid on time',
+                style: TextStyle(fontSize: 18, color: CustomColors.greenColor)),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 56),
+              child: SizedBox(
+                width: 800,
+                child: Text(
+                    'Automate financial processes with our award-winning Accounts Receivable Cloud',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                        color: CustomColors.greenColor)),
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 450,
-                  child: ExpansionTile(
-                    leading: Icon(Icons.add, color: Colors.orange),
-                    title: Text(
-                        'Are subscription for multiple businesses possible?'),
-                    children: [
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            'Yes of course, after subscribing for the first business, you can add subscriptions for many business within the system'),
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 25),
-                SizedBox(
-                  width: 450,
-                  child: ExpansionTile(
-                    leading: Icon(Icons.add, color: Colors.orange),
-                    title: Text('How much does Invoice App subscription cost?'),
-                    children: [
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            'The subscription cost depends on the package and the type os subscription (monthly or yearly). For more, see the pricing section'),
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                )
-              ],
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 48),
+              child: Text(
+                  'The Invoice App Accounts Receivable Cloud lets you program your entire accounts receivable operation, complete with dashboards, intergrated reporting and specialized tools for effecient, effective Accounts Receivable Management',
+                  textAlign: TextAlign.center,
+                  style:
+                      TextStyle(fontSize: 25, color: CustomColors.greenColor)),
             ),
+            SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 450,
-                  child: ExpansionTile(
-                    leading: Icon(Icons.add, color: Colors.orange),
-                    title: Text('What is E-Invoice?'),
-                    children: [
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            'It is a tax invoice or a simplified invoice issued and stored in an electronic format within an electronic system approved by ZATCA and complies with the E-Invoicing regulations'),
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset('image_one.png', width: 90, height: 90),
+                    SizedBox(height: 10),
+                    Text('Collections', style: TextStyle(fontSize: 24)),
+                    SizedBox(height: 10),
+                    SizedBox(
+                      width: 400,
+                      child: Text(
+                          'Invoiced includes powerful subscription billing capabilities for unlocking predictable revenue growth',
+                          style: TextStyle(fontSize: 18)),
+                    )
+                  ],
                 ),
-                SizedBox(width: 25),
-                SizedBox(
-                  width: 450,
-                  child: ExpansionTile(
-                    leading: Icon(Icons.add, color: Colors.orange),
-                    title: Text('Can I have a trial for the system?'),
-                    children: [
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            'Yes! You can have a 7 days trial period when you register'),
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
+                SizedBox(width: 35),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset('invoice_two.png', width: 80, height: 80),
+                    SizedBox(height: 10),
+                    Text('A/R Intelligence', style: TextStyle(fontSize: 24)),
+                    SizedBox(height: 10),
+                    SizedBox(
+                      width: 400,
+                      child: Text(
+                          'Virtually every question answered about the current state and future of your A/R Performance',
+                          style: TextStyle(fontSize: 18)),
+                    )
+                  ],
                 )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 450,
-                  child: ExpansionTile(
-                    leading: Icon(Icons.add, color: Colors.orange),
-                    title: Text('Does the subscription include POS devices?'),
-                    children: [
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            'The subscription does not include any devices, but we offer our customers POS devices and equipments at special prices.'),
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 25),
-                SizedBox(width: 450, child: Container())
               ],
             )
           ],

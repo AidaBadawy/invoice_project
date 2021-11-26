@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:invoice_app/constants/custom_colors.dart';
 
 class SectorsBox extends StatefulWidget {
   const SectorsBox({Key key}) : super(key: key);
@@ -17,7 +18,7 @@ class SectorsBoxState extends State<SectorsBox> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.blue,
+          color: CustomColors.greenColor,
         ),
         width: double.infinity,
         height: MediaQuery.of(context).size.height,
