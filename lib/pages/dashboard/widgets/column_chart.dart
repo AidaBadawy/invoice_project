@@ -26,16 +26,14 @@ class _ColumnChartState extends State<ColumnChart> {
       SalesData('Dec', 33),
     ];
     return Expanded(
-      child: Container(
-        child: SfCartesianChart(
-          primaryXAxis: CategoryAxis(),
-          series: [
-            ColumnSeries<SalesData, String>(
-                dataSource: chartData,
-                xValueMapper: (SalesData sales, _) => sales.month,
-                yValueMapper: (SalesData sales, _) => sales.sales)
-          ],
-        ),
+      child: SfCartesianChart(
+        primaryXAxis: CategoryAxis(),
+        series: [
+          ColumnSeries<SalesData, String>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.month,
+              yValueMapper: (SalesData sales, _) => sales.sales)
+        ],
       ),
     );
   }

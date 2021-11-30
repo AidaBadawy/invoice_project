@@ -83,17 +83,17 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                         },
                         selected: _selectedRoute == RouteNames.dashboard,
                       ),
-                      ListTile(
-                          selectedTileColor: Colors.grey[200],
-                          leading: const Icon(Feather.file_text),
-                          title: const Text(
-                            PageTitles.bill,
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          onTap: () async {
-                            await _navigateTo(context, RouteNames.bill);
-                          },
-                          selected: _selectedRoute == RouteNames.bill),
+                      // ListTile(
+                      //     selectedTileColor: Colors.grey[200],
+                      //     leading: const Icon(Feather.file_text),
+                      //     title: const Text(
+                      //       PageTitles.bill,
+                      //       style: TextStyle(fontWeight: FontWeight.bold),
+                      //     ),
+                      //     onTap: () async {
+                      //       await _navigateTo(context, RouteNames.bill);
+                      //     },
+                      //     selected: _selectedRoute == RouteNames.bill),
                       ListTile(
                         selectedTileColor: Colors.grey[200],
                         leading: const Icon(FontAwesome5Solid.file_invoice),
@@ -154,18 +154,18 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                         },
                         selected: _selectedRoute == RouteNames.subscription,
                       ),
-                      ListTile(
-                        selectedTileColor: Colors.grey[200],
-                        leading: const Icon(FontAwesome.credit_card),
-                        title: const Text(
-                          PageTitles.billing,
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        onTap: () async {
-                          await _navigateTo(context, RouteNames.billing);
-                        },
-                        selected: _selectedRoute == RouteNames.billing,
-                      ),
+                      // ListTile(
+                      //   selectedTileColor: Colors.grey[200],
+                      //   leading: const Icon(FontAwesome.credit_card),
+                      //   title: const Text(
+                      //     PageTitles.billing,
+                      //     style: TextStyle(fontWeight: FontWeight.bold),
+                      //   ),
+                      //   onTap: () async {
+                      //     await _navigateTo(context, RouteNames.billing);
+                      //   },
+                      //   selected: _selectedRoute == RouteNames.billing,
+                      // ),
                       ListTile(
                         tileColor: Colors.red,
                         leading: const Icon(MaterialIcons.logout,

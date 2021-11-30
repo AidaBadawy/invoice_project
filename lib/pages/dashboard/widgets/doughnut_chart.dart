@@ -16,17 +16,15 @@ class _DoughnutChartState extends State<DoughnutChart> {
       ChartData('Received', 38, Colors.green),
       ChartData('Outstanding', 34, Colors.red),
     ];
-    return Container(
-      child: SfCircularChart(
-        series: <CircularSeries>[
-          DoughnutSeries<ChartData, String>(
-            dataSource: chartData,
-            pointColorMapper: (ChartData data, _) => data.color,
-            xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-          )
-        ],
-      ),
+    return SfCircularChart(
+      series: <CircularSeries>[
+        DoughnutSeries<ChartData, String>(
+          dataSource: chartData,
+          pointColorMapper: (ChartData data, _) => data.color,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+        )
+      ],
     );
   }
 }

@@ -156,19 +156,20 @@ class SubscriptionPage extends StatelessWidget {
                                   Text('10 Saved Items'),
                                 ]),
                                 Spacer(),
-                                Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: Colors.black)),
-                                    child: Center(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text('Downgrade',
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold)),
-                                      ),
-                                    )),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: OutlinedButton(
+                                        onPressed: () {},
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text('Downgrade',
+                                              style: TextStyle(
+                                                  color: Colors.black)),
+                                        )),
+                                  ),
+                                ),
                               ],
                             ),
                           )),
@@ -350,126 +351,127 @@ class SubscriptionPage extends StatelessWidget {
                                   Text('Custom Domain'),
                                 ]),
                                 Spacer(),
-                                Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: Colors.black)),
-                                    child: Center(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text('Upgrade',
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold)),
-                                      ),
-                                    )),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: OutlinedButton(
+                                        onPressed: () {},
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text('Upgrade',
+                                              style: TextStyle(
+                                                  color: Colors.black)),
+                                        )),
+                                  ),
+                                ),
                               ],
                             ),
                           )),
                     ),
                     SizedBox(width: 10),
-                    Expanded(
-                      child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300),
-                            borderRadius: BorderRadius.circular(4),
-                            color: Colors.white,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SizedBox(height: 10),
-                                Text('Enterprise',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18)),
-                                SizedBox(height: 10),
-                                Container(
-                                    color: Colors.green.shade100,
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text('29.99 / mo'),
-                                    )),
-                                SizedBox(height: 20),
-                                Divider(),
-                                Text('Unlimited Invoices'),
-                                SizedBox(height: 5),
-                                Text('Unlimited Clients'),
-                                Divider(),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('25 Team Members'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Unlimited Saved Items'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Bills & Estimates'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Track Time & Expenses'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Recurring Statements'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Online Payments'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Remove Branding'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Custom Emails'),
-                                ]),
-                                SizedBox(height: 5),
-                                Row(children: [
-                                  Icon(Icons.add, size: 20),
-                                  SizedBox(width: 15),
-                                  Text('Custom Domain'),
-                                ]),
-                                Spacer(),
-                                Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: Colors.black)),
-                                    child: Center(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text('Upgrade',
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold)),
-                                      ),
-                                    )),
-                              ],
-                            ),
-                          )),
-                    ),
+                    // Expanded(
+                    //   child: Container(
+                    //       decoration: BoxDecoration(
+                    //         border: Border.all(color: Colors.grey.shade300),
+                    //         borderRadius: BorderRadius.circular(4),
+                    //         color: Colors.white,
+                    //       ),
+                    //       child: Padding(
+                    //         padding: const EdgeInsets.all(16.0),
+                    //         child: Column(
+                    //           mainAxisAlignment: MainAxisAlignment.start,
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           children: [
+                    //             SizedBox(height: 10),
+                    //             Text('Enterprise',
+                    //                 style: TextStyle(
+                    //                     fontWeight: FontWeight.bold,
+                    //                     fontSize: 18)),
+                    //             SizedBox(height: 10),
+                    //             Container(
+                    //                 color: Colors.green.shade100,
+                    //                 child: Padding(
+                    //                   padding: const EdgeInsets.all(8.0),
+                    //                   child: Text('29.99 / mo'),
+                    //                 )),
+                    //             SizedBox(height: 20),
+                    //             Divider(),
+                    //             Text('Unlimited Invoices'),
+                    //             SizedBox(height: 5),
+                    //             Text('Unlimited Clients'),
+                    //             Divider(),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('25 Team Members'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Unlimited Saved Items'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Bills & Estimates'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Track Time & Expenses'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Recurring Statements'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Online Payments'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Remove Branding'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Custom Emails'),
+                    //             ]),
+                    //             SizedBox(height: 5),
+                    //             Row(children: [
+                    //               Icon(Icons.add, size: 20),
+                    //               SizedBox(width: 15),
+                    //               Text('Custom Domain'),
+                    //             ]),
+                    //             Spacer(),
+                    //             Container(
+                    //                 width: MediaQuery.of(context).size.width,
+                    //                 decoration: BoxDecoration(
+                    //                     border:
+                    //                         Border.all(color: Colors.black)),
+                    //                 child: Center(
+                    //                   child: Padding(
+                    //                     padding: const EdgeInsets.all(8.0),
+                    //                     child: Text('Upgrade',
+                    //                         style: TextStyle(
+                    //                             fontWeight: FontWeight.bold)),
+                    //                   ),
+                    //                 )),
+                    //           ],
+                    //         ),
+                    //       )),
+                    // ),
                   ],
                 ),
               )

@@ -25,20 +25,17 @@ class _LineChartState extends State<LineChart> {
       SalesData('Nov', 27, 60),
       SalesData('Dec', 33, 15),
     ];
-    return Container(
-      child:
-          SfCartesianChart(primaryXAxis: CategoryAxis(), series: <ChartSeries>[
-        // Renders line chart
-        LineSeries<SalesData, String>(
-            dataSource: chartData,
-            xValueMapper: (SalesData sales, _) => sales.month,
-            yValueMapper: (SalesData sales, _) => sales.income),
-        LineSeries<SalesData, String>(
-            dataSource: chartData,
-            xValueMapper: (SalesData sales, _) => sales.month,
-            yValueMapper: (SalesData sales, _) => sales.expenditure),
-      ]),
-    );
+    return SfCartesianChart(primaryXAxis: CategoryAxis(), series: <ChartSeries>[
+      // Renders line chart
+      LineSeries<SalesData, String>(
+          dataSource: chartData,
+          xValueMapper: (SalesData sales, _) => sales.month,
+          yValueMapper: (SalesData sales, _) => sales.income),
+      LineSeries<SalesData, String>(
+          dataSource: chartData,
+          xValueMapper: (SalesData sales, _) => sales.month,
+          yValueMapper: (SalesData sales, _) => sales.expenditure),
+    ]);
   }
 }
 

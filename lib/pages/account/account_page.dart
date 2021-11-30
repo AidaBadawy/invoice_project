@@ -56,103 +56,98 @@ class _AccountPageState extends State<AccountPage> {
                             children: [
                               Expanded(
                                 flex: 2,
-                                child: Container(
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text('First Name'),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(
-                                                          hintText: 'First Name'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('First Name'),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(
+                                                        hintText: 'First Name'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                          SizedBox(width: 8),
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text('Last Name'),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(
-                                                          hintText: 'Last Name'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                        ),
+                                        SizedBox(width: 8),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('Last Name'),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(
+                                                        hintText: 'Last Name'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                      SizedBox(height: 8),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    Text('Email Address'),
-                                                    Spacer(),
-                                                    Text('Login Email Address')
-                                                  ],
-                                                ),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(
-                                                          hintText:
-                                                              'Email Address'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(height: 8),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text('Email Address'),
+                                                  Spacer(),
+                                                  Text('Login Email Address')
+                                                ],
+                                              ),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(
+                                                        hintText:
+                                                            'Email Address'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
                               ),
                               Padding(
@@ -161,60 +156,57 @@ class _AccountPageState extends State<AccountPage> {
                                 child: VerticalDivider(),
                               ),
                               Expanded(
-                                child: Container(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Current Password'),
-                                      SizedBox(height: 5),
-                                      TextFormField(
-                                        decoration: textInputDecoration.copyWith(
-                                            hintText: 'Current Password'
-                                            // hintStyle: TextStyle(
-                                            //     fontWeight: FontWeight.bold)
-                                            ),
-                                        validator: (val) => val.isEmpty
-                                            ? 'Enter a valid email'
-                                            : null,
-                                        onChanged: (val) {
-                                          setState(() => email = val);
-                                        },
-                                      ),
-                                      SizedBox(height: 8),
-                                      Text('New Password'),
-                                      SizedBox(height: 5),
-                                      TextFormField(
-                                        decoration: textInputDecoration.copyWith(
-                                            hintText: 'New Password'
-                                            // hintStyle: TextStyle(
-                                            //     fontWeight: FontWeight.bold)
-                                            ),
-                                        validator: (val) => val.isEmpty
-                                            ? 'Enter a valid email'
-                                            : null,
-                                        onChanged: (val) {
-                                          setState(() => email = val);
-                                        },
-                                      ),
-                                      SizedBox(height: 8),
-                                      Text('New Password (confirm)'),
-                                      SizedBox(height: 5),
-                                      TextFormField(
-                                        decoration: textInputDecoration.copyWith(
-                                            hintText: 'New Password (confirm)'
-                                            // hintStyle: TextStyle(
-                                            //     fontWeight: FontWeight.bold)
-                                            ),
-                                        validator: (val) => val.isEmpty
-                                            ? 'Enter a valid email'
-                                            : null,
-                                        onChanged: (val) {
-                                          setState(() => email = val);
-                                        },
-                                      ),
-                                    ],
-                                  ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Current Password'),
+                                    SizedBox(height: 5),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'Current Password'
+                                          // hintStyle: TextStyle(
+                                          //     fontWeight: FontWeight.bold)
+                                          ),
+                                      validator: (val) => val.isEmpty
+                                          ? 'Enter a valid email'
+                                          : null,
+                                      onChanged: (val) {
+                                        setState(() => email = val);
+                                      },
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text('New Password'),
+                                    SizedBox(height: 5),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'New Password'
+                                          // hintStyle: TextStyle(
+                                          //     fontWeight: FontWeight.bold)
+                                          ),
+                                      validator: (val) => val.isEmpty
+                                          ? 'Enter a valid email'
+                                          : null,
+                                      onChanged: (val) {
+                                        setState(() => email = val);
+                                      },
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text('New Password (confirm)'),
+                                    SizedBox(height: 5),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'New Password (confirm)'
+                                          // hintStyle: TextStyle(
+                                          //     fontWeight: FontWeight.bold)
+                                          ),
+                                      validator: (val) => val.isEmpty
+                                          ? 'Enter a valid email'
+                                          : null,
+                                      onChanged: (val) {
+                                        setState(() => email = val);
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -255,152 +247,143 @@ class _AccountPageState extends State<AccountPage> {
                             children: [
                               Expanded(
                                 flex: 2,
-                                child: Container(
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text('Address'),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(
-                                                          hintText: 'Address'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('Address'),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(
+                                                        hintText: 'Address'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                      SizedBox(height: 8),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text('Postal Code'),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(
-                                                          hintText:
-                                                              'Postal Code'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(height: 8),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('Postal Code'),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(
+                                                        hintText: 'Postal Code'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                          SizedBox(width: 8),
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text('State'),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(
-                                                          hintText: 'State'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                        ),
+                                        SizedBox(width: 8),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('State'),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(hintText: 'State'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                      SizedBox(height: 8),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text('City'),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(hintText: 'City'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(height: 8),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('City'),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(hintText: 'City'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                          SizedBox(width: 8),
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text('Country'),
-                                                SizedBox(height: 5),
-                                                TextFormField(
-                                                  decoration: textInputDecoration
-                                                      .copyWith(
-                                                          hintText: 'Country'
-                                                          // hintStyle: TextStyle(
-                                                          //     fontWeight: FontWeight.bold)
-                                                          ),
-                                                  validator: (val) => val
-                                                          .isEmpty
-                                                      ? 'Enter a valid email'
-                                                      : null,
-                                                  onChanged: (val) {
-                                                    setState(() => email = val);
-                                                  },
-                                                ),
-                                              ],
-                                            ),
+                                        ),
+                                        SizedBox(width: 8),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('Country'),
+                                              SizedBox(height: 5),
+                                              TextFormField(
+                                                decoration: textInputDecoration
+                                                    .copyWith(
+                                                        hintText: 'Country'
+                                                        // hintStyle: TextStyle(
+                                                        //     fontWeight: FontWeight.bold)
+                                                        ),
+                                                validator: (val) => val.isEmpty
+                                                    ? 'Enter a valid email'
+                                                    : null,
+                                                onChanged: (val) {
+                                                  setState(() => email = val);
+                                                },
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
                               ),
                               Padding(
@@ -409,60 +392,57 @@ class _AccountPageState extends State<AccountPage> {
                                 child: VerticalDivider(),
                               ),
                               Expanded(
-                                child: Container(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Company Name'),
-                                      SizedBox(height: 5),
-                                      TextFormField(
-                                        decoration: textInputDecoration.copyWith(
-                                            hintText: 'Company Name'
-                                            // hintStyle: TextStyle(
-                                            //     fontWeight: FontWeight.bold)
-                                            ),
-                                        validator: (val) => val.isEmpty
-                                            ? 'Enter a valid email'
-                                            : null,
-                                        onChanged: (val) {
-                                          setState(() => email = val);
-                                        },
-                                      ),
-                                      SizedBox(height: 8),
-                                      Text('Website URL'),
-                                      SizedBox(height: 5),
-                                      TextFormField(
-                                        decoration: textInputDecoration.copyWith(
-                                            hintText: 'Website URl'
-                                            // hintStyle: TextStyle(
-                                            //     fontWeight: FontWeight.bold)
-                                            ),
-                                        validator: (val) => val.isEmpty
-                                            ? 'Enter a valid email'
-                                            : null,
-                                        onChanged: (val) {
-                                          setState(() => email = val);
-                                        },
-                                      ),
-                                      SizedBox(height: 8),
-                                      Text('Tax ID or VAT Number'),
-                                      SizedBox(height: 5),
-                                      TextFormField(
-                                        decoration: textInputDecoration.copyWith(
-                                            hintText: 'Tax ID or VAT Number'
-                                            // hintStyle: TextStyle(
-                                            //     fontWeight: FontWeight.bold)
-                                            ),
-                                        validator: (val) => val.isEmpty
-                                            ? 'Enter a valid email'
-                                            : null,
-                                        onChanged: (val) {
-                                          setState(() => email = val);
-                                        },
-                                      ),
-                                    ],
-                                  ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Company Name'),
+                                    SizedBox(height: 5),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'Company Name'
+                                          // hintStyle: TextStyle(
+                                          //     fontWeight: FontWeight.bold)
+                                          ),
+                                      validator: (val) => val.isEmpty
+                                          ? 'Enter a valid email'
+                                          : null,
+                                      onChanged: (val) {
+                                        setState(() => email = val);
+                                      },
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text('Website URL'),
+                                    SizedBox(height: 5),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'Website URl'
+                                          // hintStyle: TextStyle(
+                                          //     fontWeight: FontWeight.bold)
+                                          ),
+                                      validator: (val) => val.isEmpty
+                                          ? 'Enter a valid email'
+                                          : null,
+                                      onChanged: (val) {
+                                        setState(() => email = val);
+                                      },
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text('Tax ID or VAT Number'),
+                                    SizedBox(height: 5),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'Tax ID or VAT Number'
+                                          // hintStyle: TextStyle(
+                                          //     fontWeight: FontWeight.bold)
+                                          ),
+                                      validator: (val) => val.isEmpty
+                                          ? 'Enter a valid email'
+                                          : null,
+                                      onChanged: (val) {
+                                        setState(() => email = val);
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],

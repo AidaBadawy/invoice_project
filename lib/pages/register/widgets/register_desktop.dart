@@ -63,23 +63,23 @@ class _RegisterDesktopState extends State<RegisterDesktop> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 10),
-              Text('Invoice App',
-                  style: GoogleFonts.dancingScript(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white)),
-              SizedBox(height: 20),
-              Text('Free, Unlimited Invoicing',
-                  style: TextStyle(color: Colors.white, fontSize: 24)),
-              SizedBox(height: 20),
-              SizedBox(
-                width: 600,
-                child: Text(
-                    'Thank you for choosing Invoice App. You\'re just a few steps from unlimited invoicing',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 16)),
-              ),
+              // SizedBox(height: 10),
+              // Text('Invoice App',
+              //     style: GoogleFonts.dancingScript(
+              //         fontSize: 40,
+              //         fontWeight: FontWeight.bold,
+              //         color: Colors.white)),
+              // SizedBox(height: 20),
+              // Text('Free, Unlimited Invoicing',
+              //     style: TextStyle(color: Colors.white, fontSize: 24)),
+              // SizedBox(height: 20),
+              // SizedBox(
+              //   width: 600,
+              //   child: Text(
+              //       'Thank you for choosing Invoice App. You\'re just a few steps from unlimited invoicing',
+              //       textAlign: TextAlign.center,
+              //       style: TextStyle(color: Colors.white, fontSize: 16)),
+              // ),
               SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.all(8.0),

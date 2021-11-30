@@ -1,26 +1,25 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:invoice_app/constants/custom_colors.dart';
 import 'package:invoice_app/constants/route_names.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/comments_box.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/faq_box.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/features_box.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/footer_box.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/main_box.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/prices_box.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/sectors_box.dart';
-import 'package:invoice_app/pages/home/desktop/widgets/video_box.dart';
+import 'package:invoice_app/pages/home/desktop/arabic/widgets/faq_box_ar.dart';
+import 'package:invoice_app/pages/home/desktop/arabic/widgets/features_box_ar.dart';
+import 'package:invoice_app/pages/home/desktop/arabic/widgets/footer_box_ar.dart';
+import 'package:invoice_app/pages/home/desktop/arabic/widgets/main_box_ar.dart';
+import 'package:invoice_app/pages/home/desktop/arabic/widgets/prices_box_ar.dart';
+import 'package:invoice_app/pages/home/desktop/arabic/widgets/sectors_box_ar.dart';
+import 'package:invoice_app/pages/home/desktop/arabic/widgets/video_box_ar.dart';
 
-class HomeDesktopTwo extends StatefulWidget {
-  const HomeDesktopTwo({Key key}) : super(key: key);
+class HomeDesktopArab extends StatefulWidget {
+  const HomeDesktopArab({Key key}) : super(key: key);
 
   @override
-  _HomeDesktopTwoState createState() => _HomeDesktopTwoState();
+  _HomeDesktopArabState createState() => _HomeDesktopArabState();
 }
 
-class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
+class _HomeDesktopArabState extends State<HomeDesktopArab> {
   final mainkey = GlobalKey<MainBoxState>();
   final featurekey = GlobalKey<FeaturesBoxState>();
   final sectorkey = GlobalKey<SectorsBoxState>();
@@ -70,54 +69,60 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
                   },
                   child: Text('SECTORS', style: TextStyle(color: color))),
             ),
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: TextButton(
+            //       onPressed: () {
+            //         scrollToItem(priceskey, 0);
+            //       },
+            //       child: Text('PRICES', style: TextStyle(color: color))),
+            // ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextButton(
-                  onPressed: () {
-                    scrollToItem(priceskey, 0);
-                  },
-                  child: Text('PRICES', style: TextStyle(color: color))),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.fromLTRB(8, 8, 25, 8),
               child: TextButton(
                   onPressed: () {
                     scrollToItem(faqkey, 0);
                   },
                   child: Text('FAQ', style: TextStyle(color: color))),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            Center(
               child: PopupMenuButton(
                   tooltip: 'Change language',
-                  // onSelected: (result) {
-                  //   setState(() {
-                  //     popText = result;
-                  //   });
-                  // },
-                  child:
-                      Text('English', style: TextStyle(color: Colors.orange)),
+                  onSelected: (value) async {
+                    if (value == 0) {
+                      print('This is the arabic page');
+                    }
+                    if (value == 1) {
+                      print('Move to english page');
+                      await _navigateTo(context, RouteNames.home);
+                    }
+                  },
+                  child: Text('العربية', style: TextStyle(color: color)),
                   itemBuilder: (context) => [
                         PopupMenuItem(
-                          child: Text("English"),
-                          value: 1,
+                          child: Text("العربية"),
+                          value: 0,
                         ),
                         PopupMenuItem(
-                          child: Text("Arabic"),
-                          value: 2,
+                          child: Text("ENGLISH"),
+                          value: 1,
                         )
                       ]),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.orange)),
-                  onPressed: () async {
-                    await _navigateTo(context, RouteNames.login);
-                  },
-                  child: Text('Login')),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(color)),
+                    onPressed: () async {
+                      await _navigateTo(context, RouteNames.login);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Login'),
+                    )),
+              ),
             )
           ],
         ),
@@ -131,7 +136,7 @@ class _HomeDesktopTwoState extends State<HomeDesktopTwo> {
             SizedBox(height: 30),
             VideoApp(),
             FaqBox(key: faqkey),
-            CommentsBox(),
+            // CommentsBox(),
             FooterBox(),
           ],
         ),

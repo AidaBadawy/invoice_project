@@ -13,7 +13,7 @@ class FaqBox extends StatefulWidget {
 class FaqBoxState extends State<FaqBox> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: MediaQuery.of(context).size.height,
       child: Padding(
@@ -29,8 +29,7 @@ class FaqBoxState extends State<FaqBox> {
                   const EdgeInsets.symmetric(vertical: 8.0, horizontal: 56),
               child: SizedBox(
                 width: 800,
-                child: Text(
-                    'Automate financial processes with our award-winning Accounts Receivable Cloud',
+                child: Text('بدأ في الحصول على أموال في الوقت المحدد',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -42,7 +41,7 @@ class FaqBoxState extends State<FaqBox> {
               padding:
                   const EdgeInsets.symmetric(vertical: 8.0, horizontal: 48),
               child: Text(
-                  'The Invoice App Accounts Receivable Cloud lets you program your entire accounts receivable operation, complete with dashboards, intergrated reporting and specialized tools for effecient, effective Accounts Receivable Management',
+                  'مفوتر العمليات المالية ، وتتيح لك مفوتر ذات برمجة عملية حسابات القبض بالكامل ، كاملة مع لوحات المعلومات والتقارير المتكاملة والأدوات المتخصصة لإدارة الحسابات بكفاءة وفعالية.',
                   textAlign: TextAlign.center,
                   style:
                       TextStyle(fontSize: 25, color: CustomColors.greenColor)),
@@ -57,12 +56,12 @@ class FaqBoxState extends State<FaqBox> {
                   children: [
                     Image.asset('image_one.png', width: 90, height: 90),
                     SizedBox(height: 10),
-                    Text('Collections', style: TextStyle(fontSize: 24)),
+                    Text('مجموعات', style: TextStyle(fontSize: 24)),
                     SizedBox(height: 10),
                     SizedBox(
                       width: 400,
                       child: Text(
-                          'Invoiced includes powerful subscription billing capabilities for unlocking predictable revenue growth',
+                          ' "مجموعات مفوتر" إمكانات قوية لفوترة الاشتراك مع الإيرادات المتوقعه',
                           style: TextStyle(fontSize: 18)),
                     )
                   ],
@@ -73,12 +72,12 @@ class FaqBoxState extends State<FaqBox> {
                   children: [
                     Image.asset('invoice_two.png', width: 80, height: 80),
                     SizedBox(height: 10),
-                    Text('A/R Intelligence', style: TextStyle(fontSize: 24)),
+                    Text('مفوتر', style: TextStyle(fontSize: 24)),
                     SizedBox(height: 10),
                     SizedBox(
                       width: 400,
                       child: Text(
-                          'Virtually every question answered about the current state and future of your A/R Performance',
+                          'رد بشكل اسرع لكل سؤال في جميع المشاكل الفاتوره والدفع باسرع مدة ممكنه',
                           style: TextStyle(fontSize: 18)),
                     )
                   ],

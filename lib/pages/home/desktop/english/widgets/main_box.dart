@@ -3,6 +3,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:invoice_app/constants/custom_colors.dart';
 import 'package:invoice_app/constants/route_names.dart';
 
@@ -36,7 +37,7 @@ class MainBoxState extends State<MainBox> {
                     animatedTexts: [
                       TyperAnimatedText(
                         'Put accounts recievable on autopilot.',
-                        textStyle: TextStyle(
+                        textStyle: GoogleFonts.montserrat(
                             fontSize: 50,
                             fontWeight: FontWeight.w900,
                             color: CustomColors.greenColor),
